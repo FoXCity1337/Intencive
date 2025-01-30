@@ -7,17 +7,17 @@ public class Home {
     private int year;
     private String name;
 
-    public void setter(int floors, int year,String name){
+    public void setter(int floors, int year, String name) {
         this.floors = floors;
         this.year = year;
         this.name = name;
     }
 
-    public void getter(){
+    public void getter() {
         System.out.println(this);
     }
 
-    public int getAge(){
+    public int getAge() {
         return Year.now().getValue() - year;
     }
 
