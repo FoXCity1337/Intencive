@@ -4,6 +4,8 @@ import ru.aston.aleksandrovich_aa.mainTask.DiscountCategories;
 import ru.aston.aleksandrovich_aa.mainTask.Order;
 import ru.aston.aleksandrovich_aa.mainTask.User;
 
+import java.math.BigDecimal;
+
 public class InternationalOrder extends Order {
 
     private boolean compartmentCarriage;
@@ -30,7 +32,7 @@ public class InternationalOrder extends Order {
     @Override
     public void getDiscount() {
         if (promoCode) {
-            setAmount((int) (getAmount() - (DiscountCategories.PROMO.getDiscount() * getAmount())));
+            setAmount((int) (getAmount() - (getAmount() * DiscountCategories.PROMO.getDiscount())));
         }
     }
 
@@ -41,6 +43,7 @@ public class InternationalOrder extends Order {
                 "id: " + getId() + "\n"
                 + getUser() +
                 "Promo code: " + isPromoCode() + "\n" +
-                "amount: " + getAmount();
+                "amount: " + getAmount() + "\n"
+                + "-----------------";
     }
 }

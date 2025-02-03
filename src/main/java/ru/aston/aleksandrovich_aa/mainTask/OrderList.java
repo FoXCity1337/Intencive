@@ -1,7 +1,8 @@
 package ru.aston.aleksandrovich_aa.mainTask;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 
 public class OrderList {
@@ -12,25 +13,20 @@ public class OrderList {
     }
 
     public void showOrderList() {
-        for (Order order : orderList) {
-            System.out.println(order);
-            System.out.println("-----------------");
-        }
+        orderList.forEach(System.out::println);
     }
 
-    public int getTotalCost() {
-        int totalCost = 0;
+    public BigDecimal getTotalCost() {
+        BigDecimal totalCost = new BigDecimal(0);
         for (Order order : orderList) {
-            totalCost += order.getAmount();
+            totalCost = totalCost.add(BigDecimal.valueOf(order.getAmount()));
         }
         return totalCost;
     }
 
     public void getSortedList() {
-        List<Order> sorted = orderList;
-        sorted.sort(Comparator.comparing((Order::getUserSurname)));
-        orderList = sorted;
         System.out.println("Sorted by surname");
         System.out.println("-----------------");
+        Collections.sort(orderList);
     }
 }

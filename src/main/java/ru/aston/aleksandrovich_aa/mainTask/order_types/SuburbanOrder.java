@@ -4,6 +4,8 @@ import ru.aston.aleksandrovich_aa.mainTask.DiscountCategories;
 import ru.aston.aleksandrovich_aa.mainTask.Order;
 import ru.aston.aleksandrovich_aa.mainTask.User;
 
+import java.math.BigDecimal;
+
 public class SuburbanOrder extends Order {
 
     private boolean businessClass;
@@ -20,10 +22,10 @@ public class SuburbanOrder extends Order {
     @Override
     public void getDiscount() {
         if (getUser().getAge() < 14) {
-            setAmount((int) (getAmount() - (DiscountCategories.CHILD.getDiscount() * getAmount())));
+            setAmount((int) (getAmount() - (getAmount() * DiscountCategories.CHILD.getDiscount())));
         }
         if (getUser().getAge() > 65) {
-            setAmount((int) (getAmount() - (DiscountCategories.PENSIONER.getDiscount() * getAmount())));
+            setAmount((int) (getAmount() - (getAmount() * DiscountCategories.PENSIONER.getDiscount())));
         }
     }
 
@@ -32,6 +34,7 @@ public class SuburbanOrder extends Order {
         return "Ticket info:\n" +
                 "id: " + getId() + "\n"
                 + getUser()
-                + "amount: " + getAmount();
+                + "amount: " + getAmount() + "\n"
+                + "-----------------";
     }
 }

@@ -1,6 +1,6 @@
 package ru.aston.aleksandrovich_aa.mainTask;
 
-public abstract class Order implements Discount {
+public abstract class Order implements Discount, Comparable<Order> {
 
     private int id;
     private User user;
@@ -38,5 +38,10 @@ public abstract class Order implements Discount {
 
     public String getUserSurname() {
         return user.getSurname();
+    }
+
+    @Override
+    public int compareTo(Order o) {
+        return this.user.getSurname().compareTo(o.getUserSurname());
     }
 }

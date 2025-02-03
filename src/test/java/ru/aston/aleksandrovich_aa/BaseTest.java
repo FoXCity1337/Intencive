@@ -9,6 +9,7 @@ import ru.aston.aleksandrovich_aa.mainTask.order_types.SuburbanOrder;
 public class BaseTest {
 
     OrderList orderList = new OrderList();
+
     @BeforeEach
     public void setUp() {
         User user1 = new User("Семен", "Яковлев", 25);
@@ -17,6 +18,7 @@ public class BaseTest {
 
         SuburbanOrder suburbanOrder1 = new SuburbanOrder(101, user1, 200, true);
         SuburbanOrder suburbanOrder2 = new SuburbanOrder(103, user3, 200, false);
+
 
         InternationalOrder internationalOrder1 = new InternationalOrder(102, user2, 400, true, true);
 
