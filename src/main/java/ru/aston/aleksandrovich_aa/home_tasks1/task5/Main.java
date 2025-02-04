@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa.task5;
+package ru.aston.aleksandrovich_aa.home_tasks1.task5;
 
 public class Main {
     public static void main(String[] args) {

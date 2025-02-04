@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa.task3;
+package ru.aston.aleksandrovich_aa.home_tasks1.task3;
 
 public class Study {
 
