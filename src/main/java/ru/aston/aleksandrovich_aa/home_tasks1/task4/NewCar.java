@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa.task4;
+package ru.aston.aleksandrovich_aa.home_tasks1.task4;
 
 public class NewCar {
     private String color;

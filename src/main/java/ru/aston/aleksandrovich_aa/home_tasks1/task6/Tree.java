@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa.task6;
+package ru.aston.aleksandrovich_aa.home_tasks1.task6;
 
 public class Tree {
     private int age;

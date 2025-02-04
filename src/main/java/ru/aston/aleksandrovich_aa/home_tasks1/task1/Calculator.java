@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa.task1;
+package ru.aston.aleksandrovich_aa.home_tasks1.task1;
 
 public class Calculator {
 
