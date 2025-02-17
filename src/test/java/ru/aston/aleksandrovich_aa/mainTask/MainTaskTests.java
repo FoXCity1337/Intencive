@@ -1,4 +1,4 @@
-package ru.aston.aleksandrovich_aa;
+package ru.aston.aleksandrovich_aa.mainTask;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
