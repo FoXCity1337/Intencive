@@ -77,8 +77,6 @@ public class StreamsTest {
                 .boxed()
                 .toList();
         Streams.skipFirstTenElem(list);
-
-
     }
 
     @Test
