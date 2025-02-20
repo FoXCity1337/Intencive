@@ -1,8 +1,6 @@
-package ru.aston.aleksandrovich_aa;
+package ru.aston.aleksandrovich_aa.mainTask;
 
 import org.junit.jupiter.api.BeforeEach;
-import ru.aston.aleksandrovich_aa.mainTask.OrderList;
-import ru.aston.aleksandrovich_aa.mainTask.User;
 import ru.aston.aleksandrovich_aa.mainTask.order_types.InternationalOrder;
 import ru.aston.aleksandrovich_aa.mainTask.order_types.SuburbanOrder;
 
